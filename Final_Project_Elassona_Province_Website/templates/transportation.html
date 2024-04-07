@@ -1,0 +1,1331 @@
+{% extends 'base.html' %}
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+{% block title %}Transportation{% endblock %}
+
+{% block extra_css %}
+
+    <style>
+
+
+        /*Page's Background and Features*/
+        body{
+            background-image: url('https://cdn.rtpmd.gr/media/com_news/story/2020/12/21/20777/main/el10.jpg');
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+        /*Header*/
+        @media screen and (min-width: 768px) {
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/1472276095/photo/aerial-view-of-road-in-green-woods-and-blue-lakes-water-in-finland.jpg?s=612x612&w=0&k=20&c=tIpnLONJHwkb_NO_JvtfuhDJqVmz4re5c_wqomUW-XM=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                background-color: rgba(69, 115, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1400px) {
+                .title-links{
+                    margin-top: 3.5em;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 1000px
+                }
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(143, 143, 143);}
+            .a-2{color: rgb(143, 143, 143);}
+            .a-3{color: rgb(143, 143, 143);}
+            .a-4{color: rgb(143, 143, 143);}
+            .a-5{color: rgb(143, 143, 143);}
+            .a-6{color: rgb(143, 143, 143);}
+            .a-7{color: rgb(143, 143, 143);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+            .a-6:hover{color: rgb(0, 50, 255);}
+            .a-7:hover{color: rgb(0, 50, 255);}
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/1472276095/photo/aerial-view-of-road-in-green-woods-and-blue-lakes-water-in-finland.jpg?s=612x612&w=0&k=20&c=tIpnLONJHwkb_NO_JvtfuhDJqVmz4re5c_wqomUW-XM=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                background-color: rgba(69, 115, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(143, 143, 143);}
+            .a-2{color: rgb(143, 143, 143);}
+            .a-3{color: rgb(143, 143, 143);}
+            .a-4{color: rgb(143, 143, 143);}
+            .a-5{color: rgb(143, 143, 143);}
+            .a-6{color: rgb(143, 143, 143);}
+            .a-7{color: rgb(143, 143, 143);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+            .a-6:hover{color: rgb(0, 50, 255);}
+            .a-7:hover{color: rgb(0, 50, 255);}
+
+        }
+
+
+        /*Local Transportation*/
+        @media screen and (min-width: 768px) {
+
+            .local-background-1{
+                background-image: url('https://media.istockphoto.com/id/472192669/photo/tram-in-motion-city-of-melbourne-australia.jpg?s=612x612&w=0&k=20&c=lo50eAIGZgmZXklZL9mWaFQHeRnlKlp4FWd6etgviZQ=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 40%;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .local-background-2{
+                background-color: rgba(69, 184, 109, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .local-background-1{
+                background-image: url('https://media.istockphoto.com/id/472192669/photo/tram-in-motion-city-of-melbourne-australia.jpg?s=612x612&w=0&k=20&c=lo50eAIGZgmZXklZL9mWaFQHeRnlKlp4FWd6etgviZQ=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                height: 300px;
+            }
+
+            .local-background-2{
+                background-color: rgba(69, 115, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+        }
+
+        .local-title{
+            font-style: italic; 
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            text-decoration: underline;
+            margin-top: 1em;
+        }
+
+        .taxi-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .general-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .bus-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .local-paragraph{
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 1400px) {
+            .local-paragraph{
+                padding-right: 100px;
+                padding-left: 100px;
+            }
+        }
+
+
+        /*How to Reach Us*/
+        @media screen and (min-width: 768px) {
+
+            .htru-background-1{
+                background-image: url('https://media.istockphoto.com/id/1431321650/photo/transportation-on-the-%C3%B6resund-bridge-across-the-sea.jpg?s=612x612&w=0&k=20&c=uDlfT5nAlx6i1lntl9kHcoJQ65lqlHSysVphmZZ7Ie8=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: 40%;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .htru-background-2{
+                background-color: rgba(69, 140, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .htru-background-1{
+                background-image: url('https://media.istockphoto.com/id/1431321650/photo/transportation-on-the-%C3%B6resund-bridge-across-the-sea.jpg?s=612x612&w=0&k=20&c=uDlfT5nAlx6i1lntl9kHcoJQ65lqlHSysVphmZZ7Ie8=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                height: 300px;
+            }
+
+            .htru-background-2{
+                background-color: rgba(69, 140, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+        }
+
+        .htru-title{
+            font-style: italic; 
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            text-decoration: underline;
+            margin-top: 1em;
+        }
+
+        .bus-agencies-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .train-agencies-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .national-icon{
+            background-color: rgb(80, 164, 255); 
+            border-radius: 50%; 
+            padding: 15px; 
+            margin-right: 0.2em;
+        }
+
+        .htru-paragraph{
+            text-align: justify;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 1400px) {
+            .htru-paragraph{
+                padding-right: 100px;
+                padding-left: 100px;
+            }
+
+        }
+
+
+        /*Cards*/
+        .card{
+            width: 25rem;
+            margin-bottom: 1.5em;
+            border-style: none; 
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-body-style-1{
+            border-style: solid;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            border-color: rgba(200, 200, 200, 0.8);
+            background-color: white;
+        }
+
+
+        /*Extra Cards*/
+        @media screen and (min-width: 1400px) {
+            .extra-card{
+                display: none;
+            }
+        }
+
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    
+    <div style=" background-color: rgba(255, 255, 255, 0.5); padding-top: 2em; padding-bottom: 2em;">
+
+
+        <!--Header-->
+        <div class="container">
+            <div class="row g-0 header-background-2" style="align-items: center;">
+                <div class="header-background-1 col-lg-6 col-md-6">
+                </div>
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">Transportation</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-links">
+            <span style="color: rgb(0, 0, 0); margin-right: 0.3em;">Quick Navigation: </span>
+                <a class="a-1" href="#bus">#Bus </a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-2" href="#taxi">#Taxi</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-3" href="#bus_agencies">#BusAgencies</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-4" href="#train_agencies">#TrainAgencies</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-5" href="#genpubltrans">#PublicTransport</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-6" href="#national_road_system">#RoadSystem</a>
+        </div>
+
+
+        <!--How to Reach Us-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.8); padding-bottom: 1.3em; margin-top: 4em; margin-bottom: 2em; padding-top: 0.8em;">
+
+            <div class="row g-0 htru-background-2" style="align-items: center;">
+
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">How to Reach Us</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+                <div class="htru-background-1 col-lg-6 col-md-6">
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item" style="border-radius: 0;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border-radius: 0;">
+                                Bus Agencies & Stations
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> 
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Train Agencies & Stations
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong>
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                National Road System
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong>
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="container">
+
+
+            <!--Bus Agencies-->
+            <h2 class="container text-center htru-title" id="bus_agencies"><i class="fa-solid fa-bus bus-agencies-icon"></i>Bus Agencies & Stations</h2>
+            
+            <p class="container htru-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Train Agencies-->
+            <hr class="container">
+
+            <h2 class="container text-center htru-title" id="train_agencies"><i class="fa-solid fa-train train-agencies-icon"></i>Train Agencies & Stations</h2>
+            
+            <p class="container htru-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--National Road System-->
+            <hr class="container">
+
+            <h2 class="container text-center htru-title" id="national_road_system"><i class="fa-solid fa-road national-icon"></i>National Road System Info</h2>
+            
+            <p class="container htru-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--Local Transportation-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.8); padding-bottom: 1.3em; margin-top: 4em; margin-bottom: 2em; padding-top: 0.8em;">
+
+            <div class="row g-0 local-background-2" style="align-items: center;">
+
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">Local Transportation</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+                <div class="local-background-1 col-lg-6 col-md-6">
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item" style="border-radius: 0;">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border-radius: 0;">
+                                Buses
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> 
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Taxis
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> 
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                General Public Transportation
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> 
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Phasellus sagittis bibendum finibus. Nam non nunc in neque tristique vestibulum. Nulla facilisi. 
+                                Phasellus gravida, nulla eget suscipit finibus, augue leo posuere sem, at fermentum erat tellus nec lorem. 
+                                Aenean eu sem quam. Sed dictum odio turpis, non facilisis velit suscipit nec.
+                                <a href="#"><span>Read More...</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="container">
+
+
+            <!--Buses-->
+            <h2 class="container text-center local-title" id="bus"><i class="fa-solid fa-bus-simple bus-icon"></i>Bus Stations</h2>
+            
+            <p class="container local-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Taxis-->
+            <hr class="container">
+
+            <h2 class="container text-center local-title" id="taxi"><i class="fa-solid fa-taxi taxi-icon"></i>Taxi Stations</h2>
+            
+            <p class="container local-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--General Public Transportation-->
+            <hr class="container">
+
+            <h2 class="container text-center local-title" id="genpubltrans"><i class="fa-solid fa-bicycle general-icon"></i>General Public Transportation Info</h2>
+            
+            <p class="container local-paragraph">
+                Mauris ut lectus ipsum. Nunc lacus mi, aliquet in pulvinar ut, egestas non massa. Donec eu mauris eget velit 
+                tristique pulvinar. Proin felis dolor, congue sed pretium eget, pretium fringilla quam. Donec vestibulum 
+                laoreet pharetra. Suspendisse tempus quis nibh ut lobortis. Ut imperdiet pharetra risus et viverra. Aenean 
+                tincidunt ante eget porta pellentesque. Proin pretium id arcu eu posuere. Sed viverra enim vel nibh maximus 
+                rhoncus. Phasellus gravida pretium dolor eget volutpat. Sed sit amet pellentesque dui. Aenean mollis a erat 
+                ac tristique. Aliquam et tortor feugiat, ultrices est ac, bibendum felis. Sed a nibh dolor. Nunc sed venenatis 
+                nunc.
+            </p>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <a href="#"><li class="list-group-item">Ratings</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Contact Info</li></a>
+                            <hr>
+                            <a href="#"><li class="list-group-item">Website</li></a>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Directions</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">See More</a></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+{% endblock %}

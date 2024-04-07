@@ -1,0 +1,474 @@
+{% extends 'base.html' %}
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+{% block title %}History{% endblock %}
+
+{% block extra_css %}
+
+    <style>
+
+        /*Page's Background and Features*/
+        body{
+            background-image: url('https://cdn.rtpmd.gr/media/com_news/story/2020/12/21/20777/main/el10.jpg');
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+        /*Images*/
+        img{
+            
+            margin-bottom: 3em;
+            border-radius: 25px;
+            height: 500px;
+        }
+
+        @media  screen and (max-width: 1199.5px) {
+            img{
+                height: 400px;
+            }
+        }
+
+        @media  screen and (max-width: 991.5px) {
+            img{
+                height: 300px;
+            }
+        }
+
+        @media  screen and (max-width: 767.5px) {
+            .one-image{
+                margin-left: 6em;
+            }
+        }
+
+        /*1st Image & Text*/
+        .background-1{
+            align-items: center; 
+            background-color: rgba(250, 218, 158, 0.797);
+        } 
+
+        .image-1{
+            background-image: url('https://www.mytheatro.gr/wp-content/uploads/2017/06/theatro-epidaurou.jpg'); 
+            height: 490px;
+            background-repeat: no-repeat;
+            background-position: 50% 90%;
+            background-size: cover;
+        }
+
+        .h5-1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em; 
+            text-align: center;}
+
+        .p-1{
+            text-align: justify; 
+            margin-right: 2em; 
+            margin-left: 2em; 
+            margin-top: 0.5em;
+        }
+
+        /*1st Paragraph*/
+        .h2-1{
+            font-family: 'Times New Roman', Times, serif; 
+            padding-top: 3em; 
+            text-align: center;
+        }
+
+        .paragraph-1{
+            padding-bottom: 2em; 
+            text-align: justify; 
+            margin-left: 1em; 
+            margin-right: 1em;
+        }
+
+        /*2nd Paragraph*/
+        .h2-2{
+            font-family: 'Times New Roman', Times, serif; 
+            padding-top: 3em; 
+            text-align: center;
+        }
+
+        .paragraph-2{
+            padding-bottom: 2em; 
+            text-align: justify; 
+            margin-left: 1em; 
+            margin-right: 1em;
+        }
+
+        /*3rd Paragraph*/
+        .h2-3{
+            font-family: 'Times New Roman', Times, serif; 
+            padding-top: 3em; 
+            text-align: center;
+        }
+
+        .paragraph-3{
+            padding-bottom: 2em; 
+            text-align: justify; 
+            margin-left: 1em; 
+            margin-right: 1em;
+        }
+
+        /*4th Paragraph*/
+        .h2-4{
+            font-family: 'Times New Roman', Times, serif; 
+            padding-top: 3em; 
+            text-align: center;
+        }
+
+        .paragraph-4{
+            padding-bottom: 2em; 
+            text-align: justify; 
+            margin-left: 1em; 
+            margin-right: 1em;
+        }
+
+        /*Read More Style*/
+        .span-1, .span-2, .span-3{
+            margin-right: 2em;
+            margin-left: 2em;
+            margin-bottom: 0.5em;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <div style=" background-color: rgba(255, 255, 255, 0.800); padding-bottom: 2em;">
+
+
+        <!--1st Image & Text-->
+        <div class="row g-0 background-1">
+            <div class="col-md-4 col-lg-6 image-1"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title container h5-1">Our History</h5>
+                    <p class="card-text p-1" style="margin-bottom: 1em;">
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--1st Paragraph-->
+        <div class="container">
+
+            <h2 class="h2-1">Αρχαία <i>Ελλάς</i> (Ancient Greece)</h2>
+
+            <hr>
+
+            <p class="paragraph-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Image I -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <p class="text-center"><i><b>Χάρτης Αρχαίας Ελλάδος (Map of Ancient Greece)</i></b></p>
+                        <a target="_blank" href="https://www.greeka.com/photos/maps/ancient-greece-map.jpg">
+                            <img class="container" src="https://www.greeka.com/photos/maps/ancient-greece-map.jpg">
+                        </a>
+                    </div>
+
+                    <!-- Image II -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <p class="text-center"><i><b>Χάρτης Αρχαίας Θεσσαλίας (Map of Ancient Thessalia)</i></b></p>
+                        <a target="_blank" href="https://theancientwebgreece.files.wordpress.com/2017/08/47322-istorikos_xartis.jpg">
+                            <img class="container" src="https://theancientwebgreece.files.wordpress.com/2017/08/47322-istorikos_xartis.jpg" alt="Χάρτης Αρχαίας Ελλάδας II (Map of Ancient Grecce II)">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="paragraph-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+        </div>
+
+
+        <!--2nd Image & Text-->
+        <div class="row g-0" style="align-items: center; background-color: rgb(115, 223, 240);">
+            <div class="col-md-8 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center; text-decoration: underline;">Παραδώσεις και Έθημα (Traditions and Customs)</h5>
+                    <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <span class="badge span-1"><a href="#">Read More...</a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-6" style="background-image: url('https://www.travelstyle.gr/wp-content/uploads/2017/11/petrina-gefyria-axeloos-kentriki.jpg'); height: 340px; background-repeat: no-repeat; background-size: cover;"></div>
+        </div>
+
+
+        <!--2nd Paragraph-->
+        <div class="container">
+
+            <h2 class="h2-2">Ρωμαϊκή & Βυζαντινή Αυτοκρατορία (Roman & Byzantine Empire)</h2>
+
+            <hr>
+
+            <p class="paragraph-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Image I -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <p class="text-center"><i><b>Χάρτης Ρωμαϊκής Αυτοκρατορίας (Map of Roman Empire)</i></b></p>
+                        <a target="_blank" href="https://render.fineartamerica.com/images/rendered/default/flat/puzzle/images/artworkimages/medium/3/roman-empire-vintage-maps.jpg?&targetx=-48&targety=0&imagewidth=1097&imageheight=750&modelwidth=1000&modelheight=750&backgroundcolor=AE7D4B&orientation=0&producttype=puzzle-18-24&brightness=516&v=6">
+                            <img class="container" src="https://render.fineartamerica.com/images/rendered/default/flat/puzzle/images/artworkimages/medium/3/roman-empire-vintage-maps.jpg?&targetx=-48&targety=0&imagewidth=1097&imageheight=750&modelwidth=1000&modelheight=750&backgroundcolor=AE7D4B&orientation=0&producttype=puzzle-18-24&brightness=516&v=6" alt="Χάρτης Ρωμαϊκής Αυτοκρατορίας (Map of Roman Empire)">
+                        </a>
+                    </div>
+
+                    <!-- Image II -->
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <p class="text-center"><i><b>Κωνσταντινούπολη (Constantinople; Capital of the Byzantine Empire)</i></b></p>
+                        <a target="_blank" href="https://brewminate.com/wp-content/uploads/2018/12/123118-49-Ancient-History-Byzantine-Byzantium-Constantinople.jpg">
+                            <img class="container" src="https://brewminate.com/wp-content/uploads/2018/12/123118-49-Ancient-History-Byzantine-Byzantium-Constantinople.jpg" alt="Κωνσταντινούπολη (Constantinople; Capital of the Byzantine Empire)">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="paragraph-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+        </div>
+
+
+        <!--3rd Image & Text-->
+        <div class="row g-0"  style="align-items: center; background-color: rgb(103, 185, 212);">
+            <div class="col-md-4 col-lg-6" style="background-image: url('https://www.thoughtco.com/thmb/ujHaYLDJmNNSRbqkD7neEuZa0-Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/reading-voltaire-s-tragedy-l-orphelin-de-la-chine-at-madame-geoffrin-s-salon-painted-in-1812-by-gabriel-lemonnier-1743-1824-oil-on-canvas-129-5-x196-162278848-58e6e3323df78c516266d3a6.jpg'); height: 340px; background-repeat: no-repeat; background-size: cover; background-position: 0;"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center; text-decoration: underline;">Αναγέννηση & Διαφωτισμός (The Enlightenment)</h5>
+                    <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <span class="badge span-2"><a href="#">Read More...</a></span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--3rd Paragraph-->
+        <div class="container">
+
+            <h2 class="h2-3">Ελληνική Επανάσταση (Hellenic Revolution)</h2>
+            
+            <hr>
+
+            <p class="paragraph-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Image I -->
+                    <div class="col-lg-4 col-md-5 col-7 one-image">
+                        <p class="text-center"><i><b>I. Καποδίστριας (Ioannis Kapodistrias)</i></b></p>
+                        <a target="_blank" href="https://www.kathimerini.gr/resources/toolip/img/2015/03/04/kapodistriashead.jpg">
+                            <img class="container" src="https://www.kathimerini.gr/resources/toolip/img/2015/03/04/kapodistriashead.jpg" alt="I. Καποδίστριας (Ioannis Kapodistrias)">
+                        </a>
+                    </div>
+
+                    <!-- Image II -->
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <p class="text-center"><i><b>Σύνορα του Ελληνικού Κράτους το 1830-1832 (Hellenic State's Borderrs in 1830-1832)</i></b></p>
+                        <a target="_blank" href="https://i1.prth.gr/images/1168x656/files/2023-10-01/synora_xr.jpg">
+                            <img class="container" src="https://i1.prth.gr/images/1168x656/files/2023-10-01/synora_xr.jpg" alt="Κωνσταντινούπολη (Constantinople; Capital of the Byzantine Empire)">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="paragraph-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+        </div>
+
+
+        <!--4th Image & Text-->
+        <div class="row g-0" style="align-items: center; background-color: rgb(255, 212, 167);">
+            <div class="col-md-8 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center; text-decoration: underline;">Βαλκανικοί Πόλεμοι (Balkan Wars)</h5>
+                    <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <span class="badge span-3"><a href="#">Read More...</a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-6" style="background-image: url('https://maps.lib.utexas.edu/maps/historical/macedonia_1849.jpg'); height: 340px; background-repeat: no-repeat; background-size: cover; background-position: 0;"></div>
+        </div>
+
+
+        <!--4rd Paragraph-->
+        <div class="container" style="text-align: center;">
+
+            <h2 class="h2-4">Πρώτος & Δεύτερος Παγκόσμιος Πόλεμος (WW I & II)</h2>
+
+            <hr>
+
+            <p class="paragraph-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- Image I -->
+                    <div class="col-lg-8 col-md-7 col-12">
+                        <p class="text-center"><i><b>Greek military formation in the World War I victory parade, Arc de Triomphe, Paris, July 1919.</i></b></p>
+                        <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Greek_Parade_Paris_1919.jpg/330px-Greek_Parade_Paris_1919.jpg">
+                            <img class="container" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Greek_Parade_Paris_1919.jpg/330px-Greek_Parade_Paris_1919.jpg" alt="I. Καποδίστριας (Ioannis Kapodistrias)">
+                        </a>
+                    </div>
+
+                    <!-- Image II -->
+                    <div class="col-lg-4 col-md-5 col-7 one-image">
+                        <p class="text-center"><i><b> British soldiers at Acropolis, October 1944</i></b></p>
+                        <a target="_blank" href="https://i0.wp.com/www.mixanitouxronou.gr/wp-content/uploads/2017/11/ww2akropili.jpg?w=533&ssl=1">
+                            <img class="container" src="https://i0.wp.com/www.mixanitouxronou.gr/wp-content/uploads/2017/11/ww2akropili.jpg?w=533&ssl=1" alt="Κωνσταντινούπολη (Constantinople; Capital of the Byzantine Empire)">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="paragraph-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+                Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+                fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+                placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+                volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+                sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+                sollicitudin sem enim vel nisl.
+            </p>
+
+        </div>
+
+    </div>
+
+{% endblock %}

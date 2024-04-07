@@ -1,0 +1,623 @@
+{% extends 'base.html' %}
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+
+    <style>
+        
+        /*Page's Background and Features*/
+        body{
+            background-image: url('https://cdn.rtpmd.gr/media/com_news/story/2020/12/21/20777/main/el10.jpg');
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+        .top-title{
+            width: 470px; 
+            background-color: rgba(255, 255, 255, 0.7);
+            color:rgba(0, 0, 0, 0.804); 
+            margin-bottom: 1em; 
+            margin-top: 1.5em;
+            padding-bottom: 0.3em;
+            padding-top: 0.3em;
+            font-family: 'Times New Roman', Times, serif; 
+            font-weight: 700; 
+            font-size: 50px; 
+            border-style: solid;
+            border-radius: 15px;
+        }
+
+        hr{
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            margin-right: 0.1em;
+            margin-left: 0.1em;
+            margin-bottom: 1em;
+        }
+
+        .hr-1{
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+        .wall-background{
+            padding-bottom: 3em;
+        }
+        
+        /*Local News*/
+        .index-title-1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            padding-top: 0.1em;
+            padding-bottom: 0.1em;
+            margin-top: 1.8em;
+        }
+
+        .news-background{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            margin-top: 2em;
+        }
+
+        /*Top Locations*/
+        .index-title-2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            padding-top: 1em; 
+            margin-top: 4em;
+        }
+
+        .locations-background{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            margin-top: 2em;
+        }
+
+        /*General Services*/
+        .index-title-3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            padding-top: 1em; 
+            margin-top: 4em;
+        }
+
+        .services-background{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            margin-top: 2em;
+        }
+
+        /*Newsletter*/
+        .index-title-4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            padding-top: 1em; 
+            margin-top: 4em;
+            margin-bottom: 2em;
+        }
+
+        .newsletter-background{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            padding-bottom: 3em;
+            margin-top: 2em;
+            margin-bottom: 3em;
+        }
+
+        .input{
+            border-color: rgb(255, 255, 255);
+            border-radius: 0;
+            margin: auto; 
+            width: 200px; 
+            height: 60px;
+        }
+
+        .input-icon{
+            border-color: rgb(255, 255, 255);
+            border-radius: 0;
+            height: 60px;
+            font-size: x-large;
+        }
+
+        /*Extra Card*/
+        .card{
+            border-style: none;
+        }
+
+        @media screen and (min-width:1200px) {
+            .extra-card{
+                display: none;
+            }
+        }
+
+    </style>
+
+{% endblock %}
+https://t3.ftcdn.net/jpg/05/57/58/98/360_F_557589872_q8DW8Eq30pN9F72PO1XLvWRDsnUOgqgh.jpg
+{% block content %}
+
+    <div class="wall-background">
+
+
+
+        <!--Left: General Posts & Right: Local News-->
+        <section-1>
+
+            <div class="container">
+                <div class="row">
+
+                    <h1 class="container text-center top-title">
+                        <i>
+                            Elassona's Province
+                        </i>
+                    </h1>
+                    
+                    <div class="col-lg-8 col-md-12" style=" margin-top: 2em;">
+
+                        <div class="card" style="margin-bottom: 2.5em;">
+                            <img src="https://hellothessaloniki.gr/wp-content/uploads/2021/04/Mount-Olympus-Blog-Post-Temp-4-images.jpg" class="card-img-top" alt="img-0">
+                            <div class="card-body" style="text-align: center;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    Curabitur nec laoreet enim, sed convallis risus. Vestibulum cursus ligula eu nibh facilisis, et 
+                                    elementum massa venenatis. Etiam elementum sagittis ornare. Vivamus tincidunt nisi quis dolor 
+                                    efficitur dapibus. Maecenas volutpat facilisis convallis. Morbi at orci sem. Donec pellentesque
+                                    velit non lacinia rutrum.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/634/500/300" class="card-img-top" alt="img-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/643/500/300" class="card-img-top" alt="img-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/28/500/300" class="card-img-top" alt="img-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/598/500/300" class="card-img-top" alt="img-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/678/500/300" class="card-img-top" alt="img-5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://picsum.photos/id/667/500/300" class="card-img-top" alt="img-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <span class="badge"><a href="#">Read More...</a></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!--Local News-->
+                    <div class="col-lg-4 news-background">
+
+                        <h2 class="text-center index-title-1">Local News</h2>
+
+                        <hr class="hr-1">
+
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/112/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-7">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/24/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-8">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/36/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-9">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/52/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-10">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/111/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-11">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/155/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-12">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/385/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-13">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/211/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-14">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/642/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-15">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/323/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-16">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="extra-card-1 card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/29/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-17">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="extra-card card mb-3 container col-lg-11 col-md-5 col-5">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="https://picsum.photos/id/180/1100/1200" class="img-fluid" style="margin-top: 10px; margin-bottom: 10px;" alt="img-18">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" style="text-align: justify;">
+                                                <p class="card-text"><small class="text-body-secondary">23 Dec 2021</small></p>
+                                                <h5 class="card-title"><a href="#">Card title</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section-1>
+
+
+
+        <!--Top Locations-->
+        <section-2>
+
+            <div class="container locations-background">
+
+                <h2 class="index-title-2">Top Locations</h2>
+
+                <hr>
+
+                <div class="row">
+                        
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/507/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/1057/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/1015/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/908/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/910/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3" style="max-width: 540px; background-image: url('https://picsum.photos/id/871/1800/800');  background-repeat: no-repeat; background-size: cover; border-radius: 10px;">
+                            <div class="row g-0">
+                            <div class="col-3"></div>
+                            <div class="col-8">
+                                <div class="card-body" style="background-color: rgb(255, 255, 255); border-radius: 10px;">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">See More...</a></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section-2>
+
+
+
+        <!--General Services-->
+        <section-3>
+
+            <div class="container services-background">
+
+                <h2 class="index-title-3">General Services</h2>
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">More Info...</a></span>
+                            </div>
+                            <img src="https://picsum.photos/id/692/1200/900" class="card-img-bottom" alt="img-19">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">More Info...</a></span>
+                            </div>
+                            <img src="https://picsum.photos/id/701/1200/900" class="card-img-bottom" alt="img-20">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <span class="badge"><a href="#">More Info...</a></span>
+                            </div>
+                            <img src="https://picsum.photos/id/849/1200/900" class="card-img-bottom" alt="img-21">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section-3>
+
+
+
+        <!--Newsletter-->
+        <section-4>
+
+            <div class="container newsletter-background">
+
+                <h2 class="index-title-4">Newsletter</h2>
+
+                <div class="container text-center">
+                    <h2 class="container" style="margin-top: 3em; margin-bottom: 1em; width: 400px; margin: auto; font-weight: 700;">Subscribe to 4Utravel</h2>
+                    <p style="width: 350px; margin: auto; margin-top: 1em; margin-bottom: 2em; font-size: large; font-weight: 700;">Lorem ipsum dolor sit amet consectetur adipisicing quaerat dignissimos.</p>
+                </div>
+
+                <nav class="navbar" style="margin: auto; width: 300px;">
+                    <form class="container">
+                        <div class="input-group">
+                            <input type="text" class="form-control input" placeholder="Enter your email address" aria-label="Username" aria-describedby="basic-addon1">
+                            <span class="input-group-text input-icon" id="basic-addon1"><a href="#"><i class="fa-solid fa-envelope"></i></a></span>
+                        </div>
+                    </form>
+                </nav>
+
+            </div>
+
+        </section-4>
+
+    </div>
+
+{% endblock %}

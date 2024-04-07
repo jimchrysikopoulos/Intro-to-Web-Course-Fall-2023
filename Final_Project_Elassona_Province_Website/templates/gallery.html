@@ -1,0 +1,1278 @@
+{% extends 'base.html' %}
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+{% block title %}Photo Gallery{% endblock %}
+
+{% block extra_css %}
+
+    <style>
+
+        body{
+            background-image: url('https://cdn.rtpmd.gr/media/com_news/story/2020/12/21/20777/main/el10.jpg');
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+
+        /*Header*/
+        @media screen and (min-width: 768px) {
+
+            .header-background-0{
+                margin-top: 2em;
+            }
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/595365396/photo/decorative-detail-of-an-ancient-ionic-column.jpg?s=612x612&w=0&k=20&c=PucK48V1lukMwmJeOBET4sc7PJdxICJ5HzsucuLCr4o=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                /*background-color: rgba(184, 155, 69, 0.8);*/
+                background-color: rgba(69, 115, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1400px) {
+                .title-links{
+                    margin-top: 3.5em;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 1000px
+                }
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(120, 120, 120);}
+            .a-2{color: rgb(120, 120, 120);}
+            .a-3{color: rgb(120, 120, 120);}
+            .a-4{color: rgb(120, 120, 120);}
+            .a-5{color: rgb(120, 120, 120);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+
+        }
+
+
+        /*Large Screen Design Display*/
+        @media screen and (min-width: 768.1px) {
+
+
+            /*Small Screen Design No-Display*/
+            .section-2{
+                display: none;
+            }
+
+
+            .background-1{
+                background-image: url('https://media.istockphoto.com/id/468399514/photo/old-mighty-mytikas.jpg?s=612x612&w=0&k=20&c=UNWNTuUNu2_C-zHGr48IGswxL8bwpUEli2hhZa1amE0='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-2{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-3{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-4{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-5{
+                background-image: url('https://media.istockphoto.com/id/1413585539/photo/paralia-agios-ioannis-or-paralia-beach-in-lefkada-island-greece.jpg?s=612x612&w=0&k=20&c=cKZyfgP73jMsV0Hn5CCp6dIwiMFTWKAMzhYAuuzW48g='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-6{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-7{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-8{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-9{
+                background-image: url('https://media.istockphoto.com/id/1492300103/photo/torrent.jpg?s=612x612&w=0&k=20&c=kBk_tvyPRcDeAWSRVn1Y9CPNi0GMbADrs_vxK0j4790='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-10{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-11{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-12{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-13{
+                background-image: url('https://media.istockphoto.com/id/1150479113/video/ancient-temple-aizanoi.jpg?s=640x640&k=20&c=_TPREZzFqLqAGnIYz7IQp-oyxZVMTZ8HtuglKfT5foc='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-14{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-15{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-16{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-17{
+                background-image: url('https://media.istockphoto.com/id/1407377973/photo/the-photo-taken-with-a-drone-of-the-k%C3%BCtahya-ulu-mosque.jpg?s=612x612&w=0&k=20&c=XEMB4zphUblTFhhqfIIRb-gHkHJuIsqsdLr-JEuyYnU='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-18{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-19{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .background-20{
+                background-image: url('https://media.istockphoto.com/id/961805314/photo/a-new-beginning-into-a-sunny-future.jpg?s=612x612&w=0&k=20&c=MW2AooakMyPMJGVAgaIrM9TZlBwRYuN0rTXKgTPYnbM='); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-y: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                height: 600px;
+            }
+
+            .carousels-background{
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                padding-top: 0.8em;
+                padding-bottom: 0.8em;
+                margin-top: 3em;
+                margin-bottom: 3em;
+            }
+
+            .cards-background{
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+            }
+
+            .card{
+                border-style: none;
+            }
+        }
+
+
+
+
+
+        /*Small Screen Design Display*/
+        @media screen and (max-width: 768px) {
+            
+
+            /*Large Screen Design No-Display*/
+            .section-1{
+                display: none;
+            }
+
+
+            /*Header*/
+            .header-background-0{
+                margin-top: 2em;
+            }
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/595365396/photo/decorative-detail-of-an-ancient-ionic-column.jpg?s=612x612&w=0&k=20&c=PucK48V1lukMwmJeOBET4sc7PJdxICJ5HzsucuLCr4o=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                background-color: rgba(69, 115, 184, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(120, 120, 120);}
+            .a-2{color: rgb(120, 120, 120);}
+            .a-3{color: rgb(120, 120, 120);}
+            .a-4{color: rgb(120, 120, 120);}
+            .a-5{color: rgb(120, 120, 120);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+
+
+            /*Card Photos*/
+            .card-photos-background{
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                padding-top: 0.8em;
+                padding-bottom: 0.8em;
+                margin-top: 5em;
+                margin-bottom: 3em;
+            }
+
+            h2{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 40px;
+                font-weight: 800;
+                font-style: italic;
+                padding-top: 0.3em;
+            }
+
+            .card-title-paragraph{
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+            }
+
+
+        }
+
+
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+    <section-1 class="section-1 container">
+
+        <!--Header-->
+        <div class="container header-background-0">
+            <div class="row g-0 header-background-2" style="align-items: center;">
+                <div class="header-background-1 col-lg-6 col-md-6">
+                </div>
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">Photo Gallery</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-links">
+            <span style="color: rgb(0, 0, 0); margin-right: 0.3em;">Quick Navigation: </span>
+                <a class="a-1" href="#olympus">#Olympus </a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-2" href="#ocean">#Ocean</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-3" href="#nature">#Nature</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-4" href="#landmarks">#Landmarks</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-5" href="#villages">#Villages</a>
+        </div>
+
+
+        <!--1st Carousel-->
+        <div class="container carousels-background" id="olympus">
+
+            <div id="carouselExampleCaptions1" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="background-1"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-2"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-3"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-4"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row cards-background">
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--2nd Carousel-->
+        <div class="container carousels-background" id="ocean">
+
+            <div id="carouselExampleCaptions2" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="background-5"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-6"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-7"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-8"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row cards-background">
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--3rd Carousel-->
+        <div class="container carousels-background" id="nature">
+
+            <div id="carouselExampleCaptions3" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="background-9"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-10"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-11"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-12"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row cards-background">
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--4th Carousel-->
+        <div class="container carousels-background" id="landmarks">
+
+            <div id="carouselExampleCaptions4" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="background-13"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-14"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-15"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-16"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row cards-background">
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--5th Carousel-->
+        <div class="container carousels-background" id="villages">
+
+            <div id="carouselExampleCaptions5" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="background-17"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-18"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-19"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="background-20"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="row cards-background">
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0 g-1">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section-1>
+
+
+
+
+
+
+
+
+
+
+    <!--Small Screen-->
+    <section-2 class="section-2 container">
+
+        <!--Header-->
+        <div class="container header-background-0">
+            <div class="row g-0 header-background-2" style="align-items: center;">
+                <div class="header-background-1 col-lg-6 col-md-6">
+                </div>
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">Photo Gallery</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-links">
+            <span style="color: rgb(0, 0, 0); margin-right: 0.3em;">Quick Navigation: </span>
+                <a class="a-1" href="#olympus2">#Olympus </a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-2" href="#ocean2">#Ocean</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-3" href="#nature2">#Nature</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-4" href="#landmarks2">#Landmarks</a>
+            <span style="color: rgb(120, 120, 120);">|</span>
+                <a class="a-5" href="#villages2">#Villages</a>
+        </div>
+
+
+        <!--1st Card Photo-->
+        <div class="container">
+
+            <div class="container card-photos-background" id="olympus2">
+
+                <h2 class="container text-center">Olympus</h2>
+
+                <hr class="container">
+
+                <p class="card-title-paragraph">
+                    Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                    id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                </p>
+
+                <hr class="container">
+
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/468399514/photo/old-mighty-mytikas.jpg?s=612x612&w=0&k=20&c=UNWNTuUNu2_C-zHGr48IGswxL8bwpUEli2hhZa1amE0=" class="card-img-top " alt="image-1" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/468399514/photo/old-mighty-mytikas.jpg?s=612x612&w=0&k=20&c=UNWNTuUNu2_C-zHGr48IGswxL8bwpUEli2hhZa1amE0=" class="card-img-top" alt="image-2" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/468399514/photo/old-mighty-mytikas.jpg?s=612x612&w=0&k=20&c=UNWNTuUNu2_C-zHGr48IGswxL8bwpUEli2hhZa1amE0=" class="card-img-top" alt="image-3" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/468399514/photo/old-mighty-mytikas.jpg?s=612x612&w=0&k=20&c=UNWNTuUNu2_C-zHGr48IGswxL8bwpUEli2hhZa1amE0=" class="card-img-top" alt="image-4" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--2nd Card Photo-->
+        <div class="container">
+
+            <div class="container card-photos-background" id="ocean2">
+
+                <h2 class="container text-center">Ocean View</h2>
+
+                <hr class="container">
+
+                <p class="card-title-paragraph">
+                    Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                    id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                </p>
+
+                <hr class="container">
+
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1413585539/photo/paralia-agios-ioannis-or-paralia-beach-in-lefkada-island-greece.jpg?s=612x612&w=0&k=20&c=cKZyfgP73jMsV0Hn5CCp6dIwiMFTWKAMzhYAuuzW48g=" class="card-img-top" alt="image-5" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1413585539/photo/paralia-agios-ioannis-or-paralia-beach-in-lefkada-island-greece.jpg?s=612x612&w=0&k=20&c=cKZyfgP73jMsV0Hn5CCp6dIwiMFTWKAMzhYAuuzW48g=" class="card-img-top" alt="image-6" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1413585539/photo/paralia-agios-ioannis-or-paralia-beach-in-lefkada-island-greece.jpg?s=612x612&w=0&k=20&c=cKZyfgP73jMsV0Hn5CCp6dIwiMFTWKAMzhYAuuzW48g=" class="card-img-top" alt="image-7" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1413585539/photo/paralia-agios-ioannis-or-paralia-beach-in-lefkada-island-greece.jpg?s=612x612&w=0&k=20&c=cKZyfgP73jMsV0Hn5CCp6dIwiMFTWKAMzhYAuuzW48g=" class="card-img-top" alt="image-8" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--3rd Card Photo-->
+        <div class="container">
+
+            <div class="container card-photos-background" id="nature2">
+
+                <h2 class="container text-center">Nature's Beauty</h2>
+
+                <hr class="container">
+
+                <p class="card-title-paragraph">
+                    Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                    id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                </p>
+
+                <hr class="container">
+
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1492300103/photo/torrent.jpg?s=612x612&w=0&k=20&c=kBk_tvyPRcDeAWSRVn1Y9CPNi0GMbADrs_vxK0j4790=" class="card-img-top" alt="image-9" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1492300103/photo/torrent.jpg?s=612x612&w=0&k=20&c=kBk_tvyPRcDeAWSRVn1Y9CPNi0GMbADrs_vxK0j4790=" class="card-img-top" alt="image-10" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1492300103/photo/torrent.jpg?s=612x612&w=0&k=20&c=kBk_tvyPRcDeAWSRVn1Y9CPNi0GMbADrs_vxK0j4790=" class="card-img-top" alt="image-11" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1492300103/photo/torrent.jpg?s=612x612&w=0&k=20&c=kBk_tvyPRcDeAWSRVn1Y9CPNi0GMbADrs_vxK0j4790=" class="card-img-top" alt="image-12" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+        
+
+        <!--4th Card Photo-->
+        <div class="container">
+
+            <div class="container card-photos-background" id="landmarks2">
+
+                <h2 class="container text-center">Landmarks</h2>
+
+                <hr class="container">
+
+                <p class="card-title-paragraph">
+                    Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                    id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                </p>
+
+                <hr class="container">
+
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1150479113/video/ancient-temple-aizanoi.jpg?s=640x640&k=20&c=_TPREZzFqLqAGnIYz7IQp-oyxZVMTZ8HtuglKfT5foc=" class="card-img-top" alt="image-13" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1150479113/video/ancient-temple-aizanoi.jpg?s=640x640&k=20&c=_TPREZzFqLqAGnIYz7IQp-oyxZVMTZ8HtuglKfT5foc=" class="card-img-top" alt="image-14" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1150479113/video/ancient-temple-aizanoi.jpg?s=640x640&k=20&c=_TPREZzFqLqAGnIYz7IQp-oyxZVMTZ8HtuglKfT5foc=" class="card-img-top" alt="image-15" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1150479113/video/ancient-temple-aizanoi.jpg?s=640x640&k=20&c=_TPREZzFqLqAGnIYz7IQp-oyxZVMTZ8HtuglKfT5foc=" class="card-img-top" alt="image-16" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--5th Card Photo-->
+        <div class="container">
+
+            <div class="container card-photos-background" id="villages2">
+
+                <h2 class="container text-center">Providence's Villages</h2>
+
+                <hr class="container">
+
+                <p class="card-title-paragraph">
+                    Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+                    id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+                </p>
+
+                <hr class="container">
+
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1407377973/photo/the-photo-taken-with-a-drone-of-the-k%C3%BCtahya-ulu-mosque.jpg?s=612x612&w=0&k=20&c=XEMB4zphUblTFhhqfIIRb-gHkHJuIsqsdLr-JEuyYnU=" class="card-img-top" alt="image-17" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1407377973/photo/the-photo-taken-with-a-drone-of-the-k%C3%BCtahya-ulu-mosque.jpg?s=612x612&w=0&k=20&c=XEMB4zphUblTFhhqfIIRb-gHkHJuIsqsdLr-JEuyYnU=" class="card-img-top" alt="image-18" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1407377973/photo/the-photo-taken-with-a-drone-of-the-k%C3%BCtahya-ulu-mosque.jpg?s=612x612&w=0&k=20&c=XEMB4zphUblTFhhqfIIRb-gHkHJuIsqsdLr-JEuyYnU=" class="card-img-top" alt="image-19" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card container mb-2">
+                    <img src="https://media.istockphoto.com/id/1407377973/photo/the-photo-taken-with-a-drone-of-the-k%C3%BCtahya-ulu-mosque.jpg?s=612x612&w=0&k=20&c=XEMB4zphUblTFhhqfIIRb-gHkHJuIsqsdLr-JEuyYnU=" class="card-img-top" alt="image-20" style="margin-top: 0.8em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+    </section-2>
+
+
+{% endblock %}

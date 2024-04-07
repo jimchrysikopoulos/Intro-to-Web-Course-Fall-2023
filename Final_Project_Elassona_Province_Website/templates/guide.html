@@ -1,0 +1,845 @@
+{% extends 'base.html' %}
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+{% block title %}Travel Guide{% endblock %}
+
+{% block extra_css %}
+
+    <style>
+
+        /*Page's Background and Features*/
+        body{
+            background-image: url('https://cdn.rtpmd.gr/media/com_news/story/2020/12/21/20777/main/el10.jpg');
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-size: cover;
+        }
+
+        /*Header*/
+        @media screen and (min-width: 768px) {
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/614334048/photo/young-travel-man-lending-a-helping-hand-in-mountain.jpg?s=612x612&w=0&k=20&c=cUqDkf79H_fKUBJoIcUFIS-PQrSf5zLamUZUxgyk7II=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                background-color: rgb(254, 216, 112, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1400px) {
+                .title-links{
+                    margin-top: 3.5em;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 1000px
+                }
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(143, 143, 143);}
+            .a-2{color: rgb(143, 143, 143);}
+            .a-3{color: rgb(143, 143, 143);}
+            .a-4{color: rgb(143, 143, 143);}
+            .a-5{color: rgb(143, 143, 143);}
+            .a-6{color: rgb(143, 143, 143);}
+            .a-7{color: rgb(143, 143, 143);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+            .a-6:hover{color: rgb(0, 50, 255);}
+            .a-7:hover{color: rgb(0, 50, 255);}
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .header-background-1{
+                background-image: url('https://media.istockphoto.com/id/614334048/photo/young-travel-man-lending-a-helping-hand-in-mountain.jpg?s=612x612&w=0&k=20&c=cUqDkf79H_fKUBJoIcUFIS-PQrSf5zLamUZUxgyk7II=');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                height: 300px;
+            }
+
+            .header-background-2{
+                background-color: rgb(254, 216, 112, 0.8);
+                border-radius: 20px;
+            }
+
+            .title{
+                color: rgb(255, 255, 255);
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            .title-text {
+                color: rgb(255, 255, 255);
+                font-weight: 800;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-align: center;
+            }
+
+            .title-links {
+                background-color: rgba(255, 255, 255, 0.8);
+                border-style: solid;
+                border-color: rgba(255, 255, 255, 0.4);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                font-weight: 500;
+                padding: 10px;
+                margin-top: 3.5em;
+                text-align: center;
+            }
+
+
+            /*Links Transactions*/
+            .a-1{color: rgb(143, 143, 143);}
+            .a-2{color: rgb(143, 143, 143);}
+            .a-3{color: rgb(143, 143, 143);}
+            .a-4{color: rgb(143, 143, 143);}
+            .a-5{color: rgb(143, 143, 143);}
+            .a-6{color: rgb(143, 143, 143);}
+            .a-7{color: rgb(143, 143, 143);}
+
+            .a-1:hover{color: rgb(0, 50, 255);}
+            .a-2:hover{color: rgb(0, 50, 255);}
+            .a-3:hover{color: rgb(0, 50, 255);}
+            .a-4:hover{color: rgb(0, 50, 255);}
+            .a-5:hover{color: rgb(0, 50, 255);}
+            .a-6:hover{color: rgb(0, 50, 255);}
+            .a-7:hover{color: rgb(0, 50, 255);}
+
+        }
+
+
+        /*Cards*/
+        .card{
+            width: 25rem;
+            margin-bottom: 1.5em;
+            border-style: none; 
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-body-style-1{
+            border-style: solid;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            border-radius: 10px;
+            border-color: rgba(200, 200, 200, 0.8);
+            background-color: white;
+        }
+
+        /*Extra Cards*/
+        @media screen and (min-width: 1400px) {
+            .extra-card{
+                display: none;
+            }
+        }
+
+        /*Images*/
+        img{
+            padding-top: 0.7em;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            height: 300px;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <div style="background-color: rgba(255, 255, 255, 0.4); padding-top: 2em; padding-bottom: 2em;">
+        
+        <!--Header-->
+        <div class="container">
+            <div class="row g-0 header-background-2" style="align-items: center;">
+                <div class="header-background-1 col-lg-6 col-md-6">
+                </div>
+                <div class="col-lg-6 col-md-6" style="margin-bottom: 1.5em;">
+                    <h1 class="title">Travel Guides</h1>
+                    <p class="title-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+                        id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-links">
+            <span style="color: rgb(0, 0, 0); margin-right: 0.3em;">Quick Navigation: </span>
+                <a class="a-1" href="#summer_time">#SummerTime</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-2" href="#scenery">#Scenery</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-3" href="#taverns">#Taverns</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-4" href="#relaxetion">#Relaxetion</a>
+            <span style="color: rgb(143, 143, 143);">|</span>
+                <a class="a-5" href="#musiums">#Musiums</a>
+        </div>
+
+
+        <!--Beaches-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.6); padding-bottom: 1.3em;">
+
+            <h2 class="container text-center" style="margin-top: 3em; padding-top: 1em; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;" id="summer_time">Summer Time!</h2>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP7baz0IJGtHtgheYx6uuT8M61BTRx60b2-8hnC=w426-h240-k-no" class="card-img-top" alt="image-1">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://n-takosnews.gr/wp-content/uploads/2023/08/201807211151039975.jpg" alt="image-2">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNdd7fcbPJzmPOdutU9yJsvuICqS23wQXNTqY1_=s1600" alt="image-3">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <img src="https://platiaammos.gr/wp-content/uploads/2023/04/2018-008_orig.png" alt="image-4">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--Wild Scenery-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.6); padding-bottom: 1.3em;">
+
+            <h2 class="container text-center" style="margin-top: 4em; padding-top: 1em; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;" id="scenery">Hiking...or just for the View</h2>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP7baz0IJGtHtgheYx6uuT8M61BTRx60b2-8hnC=w426-h240-k-no" class="card-img-top" alt="image-4">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://n-takosnews.gr/wp-content/uploads/2023/08/201807211151039975.jpg" alt="image-2">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNdd7fcbPJzmPOdutU9yJsvuICqS23wQXNTqY1_=s1600" alt="image-3">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <img src="https://platiaammos.gr/wp-content/uploads/2023/04/2018-008_orig.png" alt="image-1">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Taverns-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.6); padding-bottom: 1.3em;">
+
+            <h2 class="container text-center" style="margin-top: 4em; padding-top: 1em; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;" id="taverns">Eat and Drink to your heart's content!</h2>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP7baz0IJGtHtgheYx6uuT8M61BTRx60b2-8hnC=w426-h240-k-no" class="card-img-top" alt="image-4">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://n-takosnews.gr/wp-content/uploads/2023/08/201807211151039975.jpg" alt="image-2">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNdd7fcbPJzmPOdutU9yJsvuICqS23wQXNTqY1_=s1600" alt="image-3">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <img src="https://platiaammos.gr/wp-content/uploads/2023/04/2018-008_orig.png" alt="image-1">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Relaxation-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.6); padding-bottom: 1.3em;">
+
+            <h2 class="container text-center" style="margin-top: 4em; padding-top: 1em; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;" id="relaxation">A place for Relaxation</h2>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP7baz0IJGtHtgheYx6uuT8M61BTRx60b2-8hnC=w426-h240-k-no" class="card-img-top" alt="image-4">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://n-takosnews.gr/wp-content/uploads/2023/08/201807211151039975.jpg" alt="image-2">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNdd7fcbPJzmPOdutU9yJsvuICqS23wQXNTqY1_=s1600" alt="image-3">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <img src="https://platiaammos.gr/wp-content/uploads/2023/04/2018-008_orig.png" alt="image-1">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--Musiums and Sights-->
+        <div class="container" style="background-color: rgba(255, 255, 255, 0.6); padding-bottom: 1.3em;">
+
+            <h2 class="container text-center" style="margin-top: 4em; padding-top: 1em; font-style: italic; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;" id="musiums">Were the Modern World meets the Past and its Greatness</h2>
+
+            <hr class="container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipP7baz0IJGtHtgheYx6uuT8M61BTRx60b2-8hnC=w426-h240-k-no" class="card-img-top" alt="image-4">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.0173771222685!2d22.89761559250509!3d39.64281780594955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c2f6e2b747b%3A0x7ff0d44a8799821b!2zzqDOsc-BzrHOu86vzrEgzqHOsc66zr_PgM-Mz4TOsc68zr8!5e0!3m2!1sen!2sgr!4v1709410240922!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://n-takosnews.gr/wp-content/uploads/2023/08/201807211151039975.jpg" alt="image-2">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.578563731523!2d22.85977622051029!3d39.774920747394816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79089c9570707%3A0x12efd17753d1bd47!2sVrachakia%20beach!5e0!3m2!1sen!2sgr!4v1709409806467!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12">
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipNdd7fcbPJzmPOdutU9yJsvuICqS23wQXNTqY1_=s1600" alt="image-3">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24573.858931623512!2d22.893810100000003!3d39.65573735000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a79c18076bfe3d%3A0x11eee451ffdbb3d8!2sPapakosta%20beach!5e0!3m2!1sen!2sgr!4v1709409738165!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="card container col-lg-4 col-md-6 col-12 extra-card">
+                        <img src="https://platiaammos.gr/wp-content/uploads/2023/04/2018-008_orig.png" alt="image-1">
+                        <div class="card-body card-body-style-1">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="container">
+                            <hr>
+                            <li class="list-group-item">An item</li>
+                            <hr>
+                            <li class="list-group-item">A second item</li>
+                            <hr>
+                            <li class="list-group-item">A third item</li>
+                            <hr>
+                        </ul>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12253.4245409068!2d22.783172230688503!3d39.84385134945739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a78e6dae30c83d%3A0x891e5faaee25025c!2zzqDOsc-BzrHOu86vzrEgzqDOu86xz4TOuc6sIM6GzrzOvM6_z4I!5e0!3m2!1sen!2sgr!4v1709410059695!5m2!1sen!2sgr" 
+                            width="600" height="400" class="container" style="border:0; border-radius: 30px; margin-bottom: 1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="card-body">
+                            <span><a href="#" class="card-link">Card link</a></span>
+                            <span>|</span>
+                            <span><a href="#" class="card-link">Another link</a></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}
