@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<!--All images used for the creation of the project were chosen by personal preference and only for educational reasons not advertisement-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/png" href="https://www.freeiconspng.com/thumbs/airplane-icon-png/transport-airplane-takeoff-icon--android-iconset--icons8-2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        /* Footer */
+        .grid-container {
+            background-color: whitesmoke;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding-top: 0.5em;
+            padding-bottom: 1.5em;
+        }
+
+        @media screen and (max-width: 650px) {
+            .grid-container {
+                grid-template-columns: auto;
+                }
+            .grid-item {
+                text-align: center
+                }
+        }
+
+        .footer-item{
+            font-size: 1.6em; 
+            margin-top: 0.5em;
+        }
+
+        /* To Top Button */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: rgb(255, 9, 54);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            }
+
+        #myBtn:hover {
+            background-color: #555;
+            }
+
+    </style>
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <h4 style="padding-left: 0.3em;">Home Page </h4>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="users.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="albums.html">Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" method="get" action="search.html">
+                    <input class="form-control me-2" type="search" placeholder="Search for Posts" aria-label="Search" name="term"/>
+                    <button class="btn btn-outline-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--1st Image & Text-->
+    <div class="row g-0"  style="align-items: center; background-color: rgb(253, 213, 140);">
+        <div class="col-md-4 col-lg-6" style="background-image: url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D'); height: 490px; background-repeat: no-repeat; background-repeat: no-repeat; background-size: cover;"></div>
+        <div class="col-md-8 col-lg-6">
+            <div class="card-body">
+                <h5 class="card-title container" style="margin-top: 0.5em; margin-bottom: 0.5em; text-align: center;">Our History</h5>
+                <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-top: 0.5em; margin-bottom: 1em;">
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--1st Paragraph-->
+    <div class="container">
+        <h2 style="font-family: 'Times New Roman', Times, serif; padding-top: 2em; text-align: center;">The Websites' Purpose</h2>
+        <p style="padding-bottom: 2em; text-align: justify; margin-left: 1em; margin-right: 1em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+            id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+            Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+            id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+            Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+            Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+            fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+            placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+            volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+            sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+            sollicitudin sem enim vel nisl.
+        </p>
+    </div>
+
+    <!--2nd Image & Text-->
+    <div class="row g-0" style="align-items: center; background-color: rgb(140, 253, 234);">
+        <div class="col-md-8 col-lg-6">
+            <div class="card-body">
+                <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center;">Our Policy</h5>
+                <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-6" style="background-image: url('https://www.shutterstock.com/image-photo/best-4k-hd-nature-wallpaper-600nw-2260337803.jpg'); height: 340px; background-repeat: no-repeat; background-repeat: no-repeat; background-size: cover;"></div>
+    </div>
+
+    <!--2nd Paragraph-->
+    <div class="header container" style="text-align: center;">
+        <h2 style="font-family: 'Times New Roman', Times, serif; padding-top: 2em;">Marketing and Advertisement</h2>
+        <p style="padding-bottom: 2em; text-align: justify; margin-left: 1em; margin-right: 1em;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum ligula nec quam venenatis, 
+            id vulputate nibh gravida. Ut ullamcorper in libero quis rhoncus. Aliquam gravida efficitur efficitur. 
+            Pellentesque varius ultrices gravida. Ut ultricies ligula risus, eget efficitur ipsum rutrum id. Maecenas 
+            id convallis erat. Aliquam erat volutpat. Morbi tellus nunc, egestas vel mi et, pretium fermentum lacus. 
+            Integer ornare massa et consequat commodo. Etiam quam elit, rhoncus eget vulputate placerat, gravida eget velit.
+            Suspendisse potenti. Fusce posuere mi facilisis est ornare, quis venenatis felis malesuada. Nulla lectus augue, 
+            fringilla varius nulla eget, consectetur congue diam. Nulla accumsan accumsan erat eleifend ultrices. Integer 
+            placerat ut purus vel sodales. Quisque est nulla, aliquet quis rhoncus et, finibus in tortor. Phasellus dolor leo, 
+            volutpat ut interdum ac, malesuada sit amet purus. Pellentesque blandit facilisis turpis, vitae tristique neque finibus
+            sed. Aenean fermentum tellus nulla. Nullam commodo, lacus sed consectetur rutrum, velit enim sodales dolor, et 
+            sollicitudin sem enim vel nisl.
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In congue ullamcorper vestibulum.
+            Vivamus sollicitudin sit amet leo non cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
+            cubilia curae.
+        </p>
+    </div>
+
+    <!--3rd Image & Text-->
+    <div class="row g-0"  style="align-items: center; background-color: rgb(93, 168, 193);">
+        <div class="col-md-4 col-lg-6" style="background-image: url('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200'); height: 340px; background-repeat: no-repeat; background-repeat: no-repeat; background-size: cover;"></div>
+        <div class="col-md-8 col-lg-6">
+            <div class="card-body">
+                <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center;">Our Family</h5>
+                <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--3rd Paragraph-->
+    <div class="container" style="text-align: center;">
+        <h2 style="font-family: 'Times New Roman', Times, serif; padding-top: 2em;">Security and Digital Environment</h2>
+        <p style="padding-bottom: 2em; text-align: justify; margin-left: 1em; margin-right: 1em;">
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In congue ullamcorper vestibulum. 
+            Vivamus sollicitudin sit amet leo non cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere 
+            cubilia curae; Nullam convallis, velit sit amet feugiat scelerisque, eros nibh porttitor quam, eget tempor metus dui id 
+            dui. Praesent sit amet diam ante. Pellentesque placerat, ante ut lobortis sollicitudin, odio libero malesuada ipsum, at 
+            hendrerit est orci sit amet massa. Nulla euismod ullamcorper rhoncus. Cras luctus, elit non lobortis facilisis, ex est 
+            scelerisque est, a viverra tortor ante dapibus justo.
+            Fusce varius, nisl nec vehicula mattis, dui massa cursus purus, eget vehicula quam massa eget nisi. Praesent at luctus 
+            lectus, id pharetra odio. Nullam porta sodales mollis. Donec sed arcu in nibh accumsan tincidunt. Suspendisse faucibus 
+            sit amet lectus non consequat. Proin egestas turpis urna, vitae scelerisque risus elementum ac. Proin in tortor sed mauris 
+            efficitur molestie a non massa. Duis dignissim laoreet ipsum ut imperdiet. Sed sagittis sed eros eu scelerisque. Fusce 
+            consequat metus tempus, fringilla est sed, cursus lacus. Donec lobortis vestibulum massa, id efficitur nisl finibus quis. 
+            Etiam vestibulum finibus est eu vulputate. Nunc vel tincidunt nisi, nec sagittis nulla. Quisque pharetra, ligula sit amet 
+            vehicula venenatis, augue ipsum placerat tortor, sed blandit turpis tellus at lacus.
+        </p>
+    </div>
+
+    <!--4th Image & Text-->
+    <div class="row g-0" style="align-items: center; background-color: rgb(140, 229, 253);">
+        <div class="col-md-8 col-lg-6">
+            <div class="card-body">
+                <h5 class="card-title container" style="margin-top: 1em; margin-bottom: 0.5em; text-align: center;">UX and UI</h5>
+                <p class="card-text" style="text-align: justify; margin-right: 2em; margin-left: 2em; margin-bottom: 1em;">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-6" style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/125/608/904/body-of-water-during-sunrise-wallpaper-preview.jpg'); height: 340px; background-repeat: no-repeat; background-repeat: no-repeat; background-size: cover;"></div>
+    </div>
+
+    <!--Bottom Text-->
+    <div class="container" style="text-align: center;">
+        <h2 style="font-family: 'Times New Roman', Times, serif; padding-top: 1em; margin-top: 1.4em; padding-bottom: 1em; padding-left: 1em; padding-right: 1em; border-style: dashed; border-radius: 10px;">
+            A big <i>Thank You</i> to all our <b>Sponsors</b> and <b>Users</b> for helping us develop this site to an absolute travel paradise
+        </h2>
+    </div>
+
+    <!--To Top Buttom-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+    <!--Footer-->
+    <footer class="footer">
+    
+        <div class="grid-container" style="margin-top:3em;">
+            <div class="grid-item">
+                <div style="margin-top: 3em;"><img src="4Utravel_logo.png" alt="Logo" width="120"></div>
+                <div style="font-size: 1.4em;">Jim Chrysikopoulos Co.</div>
+            </div>
+            <div class="grid-item">
+                <div class="footer-item"><i>Links</i></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Home</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Log In</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Travel-Pay</b></a></div>
+            </div>
+            <div class="grid-item">
+                <div class="footer-item"><i>Sponsonrs</i></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Transportation Lines</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Hotels</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Companies</b></a></div>
+            </div>
+            <div class="grid-item">
+                <div class="footer-item"><i>Community</i></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Travelers' Log</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Social Media</b></a></div>
+                <div class="footer-col"><a class="link-danger" style="text-decoration: none;" href="#"><b>Newsletter</b></a></div>
+            </div>
+        </div>
+    
+        <div style="background-color: rgb(240, 240, 240); text-align: center; padding-bottom: 0.5em;">
+            Jim Chrysikopoulos Co. 4Utravel &copy; 2024
+        </div>
+    
+    </footer>
+
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
